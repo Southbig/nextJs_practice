@@ -12,11 +12,13 @@ export default function Home() {
     setCount(0)
   }
   return <>
+
     <Seo title='main'></Seo>
     <h1>main</h1>
     <button onClick={handlePlus}>Click !</button>
     <button onClick={handleReset}>reset</button>
     <h3>{count}</h3>
+
     <style jsx>{`      
   h1 {
     color: red;
