@@ -8,7 +8,7 @@ export default function Card() {
     {/* <img src="" alt="" /> */}
     {
       dummy.map(el => {
-        return <div className='container'>
+        return <div className='container' key={el.id}>
           <div className='img'>{el.img}</div>
           <div>{`제목: ${el.title}`}</div>
           <div>{`소제목: ${el.Middle_title}`}</div>

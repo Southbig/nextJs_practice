@@ -1,5 +1,6 @@
 const dummy = [
   {
+    id: 1,
     img: '이탈리아',
     title: '이탈리아',
     Middle_title: 'Como',
@@ -7,6 +8,7 @@ const dummy = [
     price: 30
   },
   {
+    id: 2,
     img: '오스트리아',
     title: '오스트리아',
     Middle_title: 'Wien',
@@ -14,6 +16,7 @@ const dummy = [
     price: 20
   },
   {
+    id: 3,
     img: '프랑스',
     title: '프랑스',
     Middle_title: 'Paris',
