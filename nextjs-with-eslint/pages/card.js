@@ -1,8 +1,6 @@
 import dummy from '../dummy/dummy'
 
 export default function Card() {
-
-  console.log(dummy)
   return <>
     <h1>Card Component</h1>
     {/* <img src="" alt="" /> */}

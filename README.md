@@ -226,3 +226,5 @@ return { props: { data } }
 ### getServerSideProps (타입스크립트와 함께 사용하기)
 
 [타입스크립트와 함께 사용하기](https://nextjs.org/docs/api-reference/data-fetching/get-server-side-props#getserversideprops-with-typescript)
+
+## Next JS Component 설정
