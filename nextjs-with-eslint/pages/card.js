@@ -1,6 +1,11 @@
 import dummy from '../dummy/dummy'
 
 export default function Card() {
+  (async () => {
+    const response = await fetch('http://localhost:3000/api/movieList');
+    const json = await response.json()
+    console.log(json);
+  })();
   return <>
     <h1>Card Component</h1>
     {/* <img src="" alt="" /> */}
