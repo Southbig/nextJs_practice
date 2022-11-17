@@ -21,3 +21,11 @@
 ```
 Error: Aborted because ./pages/movie.js is not accepted
 ```
+
+#### 해결
+
+`_app.js` 파일에 스타일 적용
+
+```
+import '../styles/globals.css'
+```

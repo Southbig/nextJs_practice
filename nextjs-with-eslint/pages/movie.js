@@ -36,7 +36,6 @@ export default function movie() {
 
   return <>
     <h1 className="text-3xl font-bold underline">Movie 검색</h1>
-    <div className="font-extrabold">Movie 검색</div>
     <input type="text" onChange={handleGetText} onKeyPress={(e) => handlePressEnter(e.code)} />
     <button onClick={handleTextSend} >검색</button>
     {
