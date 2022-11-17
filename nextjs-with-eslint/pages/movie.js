@@ -11,7 +11,7 @@ export default function movie() {
   const handleTextSend = () => {
     if (text.current.length !== 0 && text.current) {
       (async () => {
-        const response = await fetch(`https://www.omdbapi.com/?i=tt3896198&apikey=4e7fedf1&t=${text.current}`);
+        const response = await fetch(`https://www.omdbapi.com/?i=tt3896198&apikey=${process.env.NEXT_PUBLIC_API_KEY}&t=${text.current}`);
         const json = await response.json()
         console.log(json);
         setMovie(json)
@@ -24,7 +24,7 @@ export default function movie() {
     console.log(key)
     if (key === 'Enter' && text.current !== null && text.current.length !== 0) {
       (async () => {
-        const response = await fetch(`https://www.omdbapi.com/?i=tt3896198&apikey=4e7fedf1&t=${text.current}`);
+        const response = await fetch(`https://www.omdbapi.com/?i=tt3896198&apikey=${process.env.NEXT_PUBLIC_API_KEY}&t=${text.current}`);
         const json = await response.json()
         console.log(json);
         setMovie(json)
@@ -35,7 +35,8 @@ export default function movie() {
   }
 
   return <>
-    <h1>Movie 검색</h1>
+    <h1 className="text-3xl font-bold underline">Movie 검색</h1>
+    <div className="font-extrabold">Movie 검색</div>
     <input type="text" onChange={handleGetText} onKeyPress={(e) => handlePressEnter(e.code)} />
     <button onClick={handleTextSend} >검색</button>
     {
