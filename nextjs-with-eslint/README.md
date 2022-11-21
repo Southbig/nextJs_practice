@@ -39,7 +39,7 @@
 
 ### ContextAPI
 
-\_app.js에 상태 적용하여 사용
+`_app.js`에 상태 적용하여 사용
 
 ```
 // useState와 createContext import 로 가져온다
