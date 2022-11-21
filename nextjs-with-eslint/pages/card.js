@@ -8,7 +8,6 @@ export default function Card() {
   })();
   return <>
     <h1>Card Component</h1>
-    {/* <img src="" alt="" /> */}
     {
       dummy.map(el => {
         return <div className='container' key={el.id}>
@@ -23,7 +22,6 @@ export default function Card() {
     }
     <style jsx>{`
     .img {
-      
       height: 70px;
       color: white;
       background-color: black;

@@ -22,6 +22,9 @@
 Error: Aborted because ./pages/movie.js is not accepted
 ```
 
+- 검색 후 스페이스를 누르면 검색 대상이 없어 진다
+  왜 그러지는 모르겠으나, 조건문으로 해결
+
 #### 해결
 
 `_app.js` 파일에 스타일 적용
