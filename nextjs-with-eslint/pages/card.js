@@ -1,4 +1,5 @@
 import dummy from '../dummy/dummy'
+import Seo from './seo';
 
 export default function Card() {
   (async () => {
@@ -7,6 +8,7 @@ export default function Card() {
     console.log(json);
   })();
   return <>
+    <Seo title='card'></Seo>
     <h1>Card Component</h1>
     {
       dummy.map(el => {
