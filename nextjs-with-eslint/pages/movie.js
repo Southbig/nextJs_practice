@@ -46,11 +46,11 @@ export default function movie() {
   }
 
   return (
-    <div className='mt-20'>
+    <div className=' bg-black h-screen'>
       <Seo title='movie'></Seo>
       <div className="flex justify-center z-99">
         <div className="w-9/12">
-          <div className="input-group relative flex items-stretch w-full mb-4">
+          <div className="mt-20 mb-4 input-group relative flex items-stretch w-full">
             <input type="search" className="form-control relative flex-auto min-w-0 block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" placeholder="영화 제목을 입력해 주세요" aria-label="Search" aria-describedby="button-addon2" onChange={handleGetText} onKeyPress={(e) => handlePressEnter(e.code)} />
             <button className="px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700  focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out flex items-center" type="button" id="button-addon2" onClick={handleTextSend}>
               <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" className="w-4" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
@@ -63,18 +63,19 @@ export default function movie() {
 
       {
         movie && movie?.Response !== 'False' ?
-          <div className='movies_container'>
-            <div className='w-[330px] h-[450px] rounded-md'>
-              <img src={movie.Poster} alt="" className='w-80 h-96 object-scale-down m-auto' />
+          <div className='movies_container m-auto w-9/12 h-5/6 bg-white rounded-md border border-white'>
+            <div className=''>
+              <img src={movie.Poster !== 'N/A' ? movie.Poster : null} alt="" className='py-[30px] mx-auto w-80 h-96 object-scale-down' />
             </div>
-            <div>
-              <div>{`제목: ${movie.Title}`}</div>
-              <div>{`줄거리: ${movie.Plot}`}</div>
+            <div className='px-[20px] bg-black h-[402px] text-white'>
+              <div className='py-6'>
+                <div className='text-2xl font-extrabold'>{`${movie.Title}`}</div>
+                <div>{`개봉년도: ${movie.Year} / 평점: ${movie.imdbRating} 점`}</div>
+              </div>
+              <div className='pb-6'>{`${movie.Plot}`}</div>
               <div>{`출연진: ${movie.Actors}`}</div>
-              <div>{`개봉년도: ${movie.Year}`}</div>
-              <div>{`제공 언어: ${movie.Language}`}</div>
-              <div>{`평점: ${movie.imdbRating} 점`}</div>
               <div>{`runtime: ${movie.Runtime}`}</div>
+              <div>{`제공 언어: ${movie.Language}`}</div>
             </div>
           </div> : null
       }
