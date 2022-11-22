@@ -146,3 +146,11 @@ return <>
    <Link href="/movie" className={`${router.pathname === '/movie' ? marked : unmarked}`} > movie</Link>
 </>
 ```
+
+# Tailwind CSS
+
+## width or hight 크기, 사이즈 직접 적용
+
+```
+className="w-[100px] h-[150px]"
+```

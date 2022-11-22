@@ -64,14 +64,18 @@ export default function movie() {
       {
         movie && movie?.Response !== 'False' ?
           <div className='movies_container'>
-            <img src={movie.Poster} alt="" />
-            <div>{`제목: ${movie.Title}`}</div>
-            <div>{`줄거리: ${movie.Plot}`}</div>
-            <div>{`출연진: ${movie.Actors}`}</div>
-            <div>{`개봉년도: ${movie.Year}`}</div>
-            <div>{`제공 언어: ${movie.Language}`}</div>
-            <div>{`평점: ${movie.imdbRating} 점`}</div>
-            <div>{`runtime: ${movie.Runtime}`}</div>
+            <div className='w-[330px] h-[450px] rounded-md'>
+              <img src={movie.Poster} alt="" className='w-80 h-96 object-scale-down m-auto' />
+            </div>
+            <div>
+              <div>{`제목: ${movie.Title}`}</div>
+              <div>{`줄거리: ${movie.Plot}`}</div>
+              <div>{`출연진: ${movie.Actors}`}</div>
+              <div>{`개봉년도: ${movie.Year}`}</div>
+              <div>{`제공 언어: ${movie.Language}`}</div>
+              <div>{`평점: ${movie.imdbRating} 점`}</div>
+              <div>{`runtime: ${movie.Runtime}`}</div>
+            </div>
           </div> : null
       }
     </div>)
